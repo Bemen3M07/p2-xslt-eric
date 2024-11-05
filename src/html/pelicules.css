@@ -1,0 +1,109 @@
+/* Reset bàsic per a marges i alineacions */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cos de la pàgina amb gradient */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f7cac9, #92a8d1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Capçalera amb gradient i estilització */
+header {
+    background: linear-gradient(135deg, #4a90e2, #d94f70);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Contenidor principal amb espaiat */
+main {
+    flex: 1;
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Contenidor de fitxes amb disseny en columnes */
+.fitxes-pellicules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Estilització per a cada fitxa de pel·lícula */
+.fitxa {
+    background: linear-gradient(135deg, #ffffff, #f2f6ff);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fitxa:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Imatge de cada fitxa */
+.fitxa img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #4a90e2;
+}
+
+/* Títol i text de les pel·lícules */
+.fitxa h2 {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin: 1rem;
+    text-align: center;
+}
+
+.fitxa p {
+    margin: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.sinopsi {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* Peu de pàgina amb gradient i centrament */
+footer {
+    background: linear-gradient(135deg, #4a90e2, #d94f70);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+footer span {
+    color: #ff6b6b;
+}

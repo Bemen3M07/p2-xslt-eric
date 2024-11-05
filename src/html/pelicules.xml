@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="pelicules.xsl"?>
+<pelicules>
+    <pelicula>
+        <titol>Títol de la Pel·lícula 1</titol>
+        <imatge>imatge1.jpg</imatge>
+        <genere>Acció</genere>
+        <any>2020</any>
+        <director>Jane Doe</director>
+        <sinopsi>Una breu sinopsi de la pel·lícula per captivar l'atenció del lector.</sinopsi>
+    </pelicula>
+    <pelicula>
+        <titol>Títol de la Pel·lícula 2</titol>
+        <imatge>imatge2.jpg</imatge>
+        <genere>Ciència Ficció</genere>
+        <any>2018</any>
+        <director>John Smith</director>
+        <sinopsi>Una sinopsi interessant per descriure breument el contingut de la pel·lícula.</sinopsi>
+    </pelicula>
+    <pelicula>
+        <titol>Títol de la Pel·lícula 3</titol>
+        <imatge>imatge3.jpg</imatge>
+        <genere>Drama</genere>
+        <any>2021</any>
+        <director>Alice Brown</director>
+        <sinopsi>Una descripció que doni una idea del tema de la pel·lícula i el seu interès.</sinopsi>
+    </pelicula>
+</pelicules>

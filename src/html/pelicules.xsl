@@ -8,6 +8,40 @@
             <title>Les meves pel·lícules favorites</title>
             <!-- Enlace al archivo CSS externo -->
             <link rel="stylesheet" href="pelicules.css"/>
+            <script>
+            // Función para desplegar/ocultar la sinopsis al hacer clic
+            function toggleSynopsis(event) {
+                const currentFitxa = event.currentTarget;
+
+                // Cierra cualquier otra ficha que esté expandida
+                document.querySelectorAll(".fitxa.expandida").forEach(fitxa => {
+                    if (fitxa !== currentFitxa) {
+                        fitxa.classList.remove("expandida");
+                        fitxa.querySelector(".sinopsi").style.display = "none";
+                    }
+                });
+
+                // Alterna el estado de la ficha clicada
+                const synopsis = currentFitxa.querySelector(".sinopsi");
+                if (synopsis.style.display === "none" || synopsis.style.display === "") {
+                    currentFitxa.classList.add("expandida");
+                    synopsis.style.display = "block";
+                } else {
+                    currentFitxa.classList.remove("expandida");
+                    synopsis.style.display = "none";
+                }
+            }
+
+            // Añadir los eventos de clic a cada ficha después de cargar el documento
+            document.addEventListener("DOMContentLoaded", () => {
+                const movies = document.querySelectorAll(".fitxa");
+                movies.forEach(movie => {
+                    movie.addEventListener("click", toggleSynopsis);
+                });
+            });
+            </script>
+
+
         </head>
         <body>
             <!-- Cabecera de la página -->
@@ -54,7 +88,7 @@
                             </p>
                             
                             <!-- Sinopsis de la película -->
-                            <p class="sinopsi">
+                            <p class="sinopsi" style="display: none">
                                 <xsl:value-of select="sinopsi"/>
                             </p>
                         </article>

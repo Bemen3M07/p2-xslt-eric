@@ -2,27 +2,51 @@
 <?xml-stylesheet type="text/xsl" href="pelicules.xsl"?>
 <pelicules>
     <pelicula>
-        <titol>Títol de la Pel·lícula 1</titol>
-        <imatge>imatge1.jpg</imatge>
+        <titol>Fast and Furious X</titol>
+        <imatge>../img/FFX.jpg</imatge>
         <genere>Acció</genere>
-        <any>2020</any>
-        <director>Jane Doe</director>
-        <sinopsi>Una breu sinopsi de la pel·lícula per captivar l'atenció del lector.</sinopsi>
+        <any>2023</any>
+        <director>Vin Diesel</director>
+        <sinopsi>Durant nombroses missions més que impossibles, Dom Toretto i la seva família han estat capaços de ser més llestos, de tenir més valor i d'anar més ràpid que qualsevol enemic que s'hi creués. Però ara hauran d'enfrontar-se a l'oponent més letal que mai hagin conegut.</sinopsi>
     </pelicula>
     <pelicula>
-        <titol>Títol de la Pel·lícula 2</titol>
-        <imatge>imatge2.jpg</imatge>
+        <titol>Terrifier 3</titol>
+        <imatge>../img/terr3.jpeg</imatge>
+        <genere>Terror</genere>
+        <any>2024</any>
+        <director>Damien Leone</director>
+        <sinopsi>Cinc anys després de sobreviure a la matança de Halloween d'Art the Clown, Sienna i el seu germà lluiten per reconstruir les seves vides destrossades. A mesura que s?acosta la temporada nadalenca, intenten abraçar l?esperit nadalenc i deixar enrere els horrors del passat.</sinopsi>
+    </pelicula>
+    <pelicula>
+        <titol>Uncharted</titol>
+        <imatge>../img/uncharted.jpg</imatge>
+        <genere>Aventura</genere>
+        <any>2022</any>
+        <director>Ruben Fleischer</director>
+        <sinopsi>Basada en una de les sèries de videojocs més venudes i aclamades per la crítica de tots els temps, "Uncharted" presenta un jove, astut i carismàtic, Nathan Drake (Tom Holland) en la seva primera aventura com a caçatresors amb el seu enginyós company Victor “ Sully” Sullivan (Mark Wahlberg).</sinopsi>
+    </pelicula>
+    <pelicula>
+        <titol>Expediente Warren: The Conjuring</titol>
+        <imatge>../img/exWarren.jpeg</imatge>
+        <genere>Terror</genere>
+        <any>2013</any>
+        <director>James Wan</director>
+        <sinopsi>Basada en una història real documentada pels prestigiosos demonòlegs Ed i Lorraine Warren. Narra les trobades sobrenaturals que va viure la família Perron a casa seva a Rhode Island a principis dels 70. El matrimoni Warren, investigadors de renom al món dels fenòmens paranormals, van acudir a la crida d'aquesta família aterrida per la presència a la seva granja d'un ésser maligne.</sinopsi>
+    </pelicula>
+    <pelicula>
+        <titol>Dune</titol>
+        <imatge>../img/dune.jpg</imatge>
         <genere>Ciència Ficció</genere>
-        <any>2018</any>
-        <director>John Smith</director>
-        <sinopsi>Una sinopsi interessant per descriure breument el contingut de la pel·lícula.</sinopsi>
+        <any>2021</any>
+        <director>Denis Villeneuve</director>
+        <sinopsi>A l'Any 10191 el desèrtic planeta Arrakis, feu de la família Harkonnen des de fa generacions, queda en mans de la Casa dels Atreides per ordre de l'emperador. Amb això els cedeix l'explotació de les reserves d'espècia, la primera matèria més valuosa de la galàxia, necessària per als viatges interestel·lars i també una droga capaç d'amplificar la consciència i estendre la vida.</sinopsi>
     </pelicula>
     <pelicula>
-        <titol>Títol de la Pel·lícula 3</titol>
-        <imatge>imatge3.jpg</imatge>
-        <genere>Drama</genere>
-        <any>2021</any>
-        <director>Alice Brown</director>
-        <sinopsi>Una descripció que doni una idea del tema de la pel·lícula i el seu interès.</sinopsi>
+        <titol>El exorcista del papa</titol>
+        <imatge>../img/exPapa.jpg</imatge>
+        <genere>Teror</genere>
+        <any>2023</any>
+        <director>Julius Avery</director>
+        <sinopsi>El 1987, Gabriele, exorcista en cap a la diòcesi de Roma, és enviat per encàrrec directe del Papa a l'abadia de Sant Sebastià, a Espanya, ja que, segons el Sant Pare, aquest lloc acull un mal fosc molt poderós que porta vigent des de la Santa Inquisició. Basada a la vida de Gabriele Amorth.</sinopsi>
     </pelicula>
 </pelicules>

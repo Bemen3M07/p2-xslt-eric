@@ -41,9 +41,7 @@
                             directorP.innerHTML = "<strong>Director:</strong> " + pelicula.director;
 
                             const sinopsiP = document.createElement("p");
-                            sinopsiP.classList.add("sinopsi");
-                            sinopsiP.style.display = "none";
-                            sinopsiP.textContent = pelicula.sinopsi;
+                            sinopsiP.innerHTML = "<strong>Sinopsi:</strong>" + pelicula.sinopsi;
 
                             const deleteButton = document.createElement("button");
                             deleteButton.textContent = "Borrar";
@@ -62,17 +60,14 @@
                             fitxa.appendChild(deleteButton);
 
                             fitxesPellicules.appendChild(fitxa);
-
-                            // Añadir el evento para alternar la sinopsis
-                            fitxa.addEventListener("click", function() {
-                                if (sinopsiP.style.display === "none") {
-                                    sinopsiP.style.display = "block";
-                                } else {
-                                    sinopsiP.style.display = "none";
-                                }
-                            });
                         });
                     });
+                    document.addEventListener("DOMContentLoaded", function() {
+                        mostrarPeliculas();
+                    });
+
+                    
+
                 </script>
             </head>
             <body>
@@ -106,21 +101,21 @@
                                 <p>
                                     <strong>Director:</strong> <xsl:value-of select="director"/>
                                 </p>
-                                <p class="sinopsi" style="display: none">
+                                <p class="sinopsi">
                                     <xsl:value-of select="sinopsi"/>
                                 </p>
 
                                 <!-- Botón de borrar -->
-                                <button class="delete-button" onclick="eliminarPeliculaXSL()">Borrar</button>
+                                <button id="delete-bttn" onclick="eliminarPeliculaXSL()">Borrar</button>
                             </article>
                         </xsl:for-each>
                     </section>
 
-                    <a href="formulario.xml">
-                        <button>Añadir Película</button>
-                    </a>
+                    
                 </main>
-
+                <a href="formulario.xml">
+                    <button id="AfegirPelicula">Añadir Película</button>
+                </a>
                 <footer>
                     <p>© 2023 Les meves pel·lícules favorites</p>
                 </footer>

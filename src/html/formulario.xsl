@@ -10,9 +10,8 @@
                 <link rel="stylesheet" href="pelicules.css"/>
             </head>
             <body>
-                <h1>Añadir Nueva Película</h1>
-
-                <!-- Formulario para añadir película -->
+            <header><h1>Añadir Nueva Película</h1></header>
+                <main>
                 <form id="formPelicula">
                     <label for="titol">Título:</label>
                     <input type="text" id="titol" name="titol" required="required"/>
@@ -34,28 +33,42 @@
                     
                     <button type="button" onclick="guardarPelicula()">Guardar Película</button>
                 </form>
-
+                <!-- Formulario para añadir película -->
+                </main>           
+                
+                <section id="PeliculasRegistradas">
                 <h2>Películas Registradas</h2>
-                <div id="peliculas-lista"></div>
-
+                <p id="mensajeSinPeliculas">No hi han pelicules afegides encara</p> <!-- Mensaje predeterminado -->
+                <div id="peliculas-lista" class="fitxes-pellicules"></div> <!-- Contenedor de películas -->
+                
                 <script>
-                    // Cargar las películas del localStorage y mostrarlas
+                    // Función para mostrar películas desde localStorage
                     function mostrarPeliculas() {
                         let peliculas = JSON.parse(localStorage.getItem('pelicules')) || [];
                         const lista = document.getElementById('peliculas-lista');
-                        lista.innerHTML = ''; // Limpiar lista actual
+                        const mensaje = document.getElementById('mensajeSinPeliculas');
+                        
+                        if (peliculas.length === 0) {
+                            mensaje.style.display = 'block'; // Mostrar mensaje si no hay películas
+                            lista.innerHTML = ''; // Limpiar la lista de películas
+                        } else {
+                            mensaje.style.display = 'none'; // Ocultar mensaje si hay películas
+                            lista.innerHTML = ''; // Limpiar la lista de películas
 
-                        peliculas.forEach(function(pelicula) {
-                            const divPelicula = document.createElement('div');
-                            divPelicula.innerHTML = `
-                                <h3>${pelicula.titol} (${pelicula.any})</h3>
-                                <p><strong>Director:</strong> ${pelicula.director}</p>
-                                <p><strong>Género:</strong> ${pelicula.genere}</p>
-                                <p><strong>Sinopsis:</strong> ${pelicula.sinopsi}</p>
-                                <img src="${pelicula.imatge}" alt="Imagen de ${pelicula.titol}" width="100" />
-                            `;
-                            lista.appendChild(divPelicula);
-                        });
+                            peliculas.forEach(function(pelicula) {
+                                const divPelicula = document.createElement('div');
+                                divPelicula.classList.add('fitxa'); // Añadir clase CSS de la película
+
+                                divPelicula.innerHTML = `
+                                    <img src="${pelicula.imatge}" alt="Imagen de ${pelicula.titol}" width="100" />
+                                    <h2>${pelicula.titol} (${pelicula.any})</h2>
+                                    <p><strong>Director:</strong> ${pelicula.director}</p>
+                                    <p><strong>Género:</strong> ${pelicula.genere}</p>
+                                    <p class="sinopsi"><strong>Sinopsis:</strong> ${pelicula.sinopsi}</p>
+                                `;
+                                lista.appendChild(divPelicula);
+                            });
+                        }
                     }
 
                     // Función para guardar película en localStorage
@@ -99,7 +112,12 @@
                     // Cargar las películas cuando se carga la página
                     window.onload = mostrarPeliculas;
                 </script>
-                <button onclick="window.history.back()">Atrás</button>
+            </section>
+
+                <button id="atras" onclick="window.history.back()">Atrás</button>
+                <footer>
+                    <p>© 2023 Les meves pel·lícules favorites</p>
+                </footer>
             </body>
         </html>
     </xsl:template>

@@ -13,6 +13,7 @@ body {
     display: flex; /* Utilitzar disseny flexbox */
     flex-direction: column; /* Disposar els fills en una columna */
     min-height: 100vh; /* Assegurar que el cos ocupi almenys l'alçada completa de la finestra */
+    align-items: center;
 }
 
 /* Capçalera amb gradient i estil */
@@ -23,6 +24,7 @@ header {
     text-align: center; /* Centrar text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Afegir ombra per a profunditat */
     border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Afegir un subtil border inferior */
+    width: 100%;
 }
 
 header h1 {
@@ -107,8 +109,119 @@ footer {
     font-size: 0.9rem; /* Establir mida de la font */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Afegir ombra per a profunditat */
     border-top: 2px solid rgba(255, 255, 255, 0.1); /* Afegir un subtil border superior */
+    width: 100%;
 }
 
 footer span {
     color: #ff6b6b; /* Establir color del text */
+}
+#atras{
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 8%;
+    padding: 1%;
+    font-weight: bold;
+    border-radius: 10%;
+    border: none;
+    position: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    position: center;
+    text-align: center;
+
+}
+
+#AfegirPelicula {
+    background-color: #d94f70;
+    color: white;
+    text-align: center;
+    font-size: 125%;
+    padding: 5%;
+    font-weight: bold;
+    border-radius: 10%;
+    border: none;
+    position: center;
+    margin-bottom: 10%;
+    position: center;
+}
+
+
+/* Formulario */
+#formPelicula {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+#formPelicula label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#formPelicula input,
+#formPelicula textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#formPelicula textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#formPelicula input[type="file"] {
+    padding: 0;
+}
+
+#formPelicula button {
+    background-color: #d94f70;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#formPelicula button:hover {
+    background-color: #ff6b6b;
+}
+
+#formPelicula input:focus,
+#formPelicula textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#formPelicula .field-container {
+    margin-bottom: 20px;
+}
+
+#formPelicula .field-container:last-child {
+    margin-bottom: 0;
+}
+
+#delete-bttn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5%;
+    border-radius: 15%;
+    font-weight: bold;
+    display: block; /* Hace que el botón ocupe el 100% del ancho del contenedor */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    text-align: center;
+    width:auto; /* Ajusta el ancho del botón según tu preferencia */
 }

@@ -60,7 +60,7 @@
                                 divPelicula.classList.add('fitxa'); // Añadir clase CSS de la película
 
                                 divPelicula.innerHTML = `
-                                    <img src="${pelicula.imatge}" alt="Imagen de ${pelicula.titol}" width="100" />
+                                    <img src= "${pelicula.imatge}" alt="Imagen de ${pelicula.titol}" width="100" />
                                     <h2>${pelicula.titol} (${pelicula.any})</h2>
                                     <p><strong>Director:</strong> ${pelicula.director}</p>
                                     <p><strong>Género:</strong> ${pelicula.genere}</p>
@@ -83,6 +83,7 @@
                         const reader = new FileReader();
                         reader.onload = function(event) {
                             const imatge = event.target.result; // Convertir la imagen a Base64
+                            console.log("Imagen en Base64:", imatge); // Agrega esta línea para depurar
 
                             const pelicula = {
                                 titol: titol,

@@ -125,12 +125,11 @@
                     <!-- Fi del bucle que repeteix per a cada pel·lícula. -->
                 </section>
                 <!-- Botón para abrir la página de añadir película -->
-                <a href="añadir_pelicula.xsl" target="_blank">
+                <a href="formulario.xml">
                     <button>Añadir Película</button>
                 </a>
 
             </main>
-
             <!-- Peu de pàgina -->
             <footer>
                 <p>© 2023 Les meves pel·lícules favorites</p>

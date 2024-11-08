@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="formulario.xsl"?>
+
+<formulario>
+    <titol></titol>       <!-- Campo para el título de la película -->
+    <any></any>           <!-- Campo para el año de la película -->
+    <director></director> <!-- Campo para el director de la película -->
+    <genere></genere>     <!-- Campo para el género de la película -->
+    <sinopsi></sinopsi>   <!-- Campo para la sinopsis de la película -->
+    <imatge></imatge>     <!-- Campo para la imagen de la película en formato Base64 o URL -->
+</formulario>

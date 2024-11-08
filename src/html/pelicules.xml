@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="pelicules.xsl"?>
-<pelicules>
-    <pelicula>
-        <titol>Fast and Furious X</titol>
-        <imatge>../img/FFX.jpg</imatge>
-        <genere>Acció</genere>
-        <any>2023</any>
-        <director>Vin Diesel</director>
-        <sinopsi>Durant nombroses missions més que impossibles, Dom Toretto i la seva família han estat capaços de ser més llestos, de tenir més valor i d'anar més ràpid que qualsevol enemic que s'hi creués. Però ara hauran d'enfrontar-se a l'oponent més letal que mai hagin conegut.</sinopsi>
+<pelicules> <!-- Aquesta etiqueta engloba totes les películes -->
+    <pelicula> <!-- Aquesta etiqueta engloba una pelicula -->
+        <titol>Fast and Furious X</titol> <!-- Aquesta etiqueta conté el títol de la pel·lícula -->
+        <imatge>../img/FFX.jpg</imatge> <!-- Aquesta etiqueta conté la ruta de la imatge de la pel·lícula -->
+        <genere>Acció</genere> <!-- Aquesta etiqueta conté el gènere de la pel·lícula -->
+        <any>2023</any> <!-- Aquesta etiqueta conté l'any de la pel·lícula -->
+        <director>Vin Diesel</director> <!-- Aquesta etiqueta conté el director de la pel·lícula -->
+        <sinopsi>Durant nombroses missions més que impossibles, Dom Toretto i la seva família han estat capaços de ser més llestos, de tenir més valor i d'anar més ràpid que qualsevol enemic que s'hi creués. Però ara hauran d'enfrontar-se a l'oponent més letal que mai hagin conegut.</sinopsi> <!-- Aquesta etiqueta conté la sinopsi de la pel·lícula -->
     </pelicula>
     <pelicula>
         <titol>Terrifier 3</titol>

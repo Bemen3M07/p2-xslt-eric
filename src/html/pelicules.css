@@ -1,114 +1,114 @@
-/* Reset bàsic per a marges i alineacions */
+/* Restablir marges i alineacions bàsiques */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Eliminar marge per defecte */
+    padding: 0; /* Eliminar padding per defecte */
+    box-sizing: border-box; /* Incloure padding i border en l'amplada i alçada totals de l'element */
 }
 
 /* Cos de la pàgina amb gradient */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f7cac9, #92a8d1);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: Arial, sans-serif; /* Establir família de fonts */
+    background: linear-gradient(135deg, #f7cac9, #92a8d1); /* Establir gradient de fons */
+    color: #333; /* Establir color del text */
+    display: flex; /* Utilitzar disseny flexbox */
+    flex-direction: column; /* Disposar els fills en una columna */
+    min-height: 100vh; /* Assegurar que el cos ocupi almenys l'alçada completa de la finestra */
 }
 
-/* Capçalera amb gradient i estilització */
+/* Capçalera amb gradient i estil */
 header {
-    background: linear-gradient(135deg, #4a90e2, #d94f70);
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #4a90e2, #d94f70); /* Establir gradient de fons */
+    color: #fff; /* Establir color del text a blanc */
+    padding: 2rem; /* Afegir padding */
+    text-align: center; /* Centrar text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Afegir ombra per a profunditat */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Afegir un subtil border inferior */
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem; /* Establir mida de la font */
+    margin-bottom: 0.5rem; /* Afegir marge inferior */
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Establir mida de la font */
 }
 
 /* Contenidor principal amb espaiat */
 main {
-    flex: 1;
-    padding: 3rem 5%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex: 1; /* Permetre que el main creixi i ompli l'espai disponible */
+    padding: 3rem 5%; /* Afegir padding */
+    display: flex; /* Utilitzar disseny flexbox */
+    justify-content: center; /* Centrar contingut horitzontalment */
+    align-items: flex-start; /* Alinear elements a l'inici verticalment */
 }
 
-/* Contenidor de fitxes amb disseny en columnes */
+/* Contenidor per a les fitxes de pel·lícules amb disseny de columna */
 .fitxes-pellicules {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
+    display: grid; /* Utilitzar disseny de graella */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnes de graella responsives */
+    gap: 2rem; /* Afegir espai entre elements de la graella */
+    width: 100%; /* Amplada completa */
+    max-width: 1200px; /* Amplada màxima */
 }
 
-/* Estilització per a cada fitxa de pel·lícula */
+/* Estil per a cada fitxa de pel·lícula */
 .fitxa {
-    background: linear-gradient(135deg, #ffffff, #f2f6ff);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #ffffff, #f2f6ff); /* Establir gradient de fons */
+    border-radius: 15px; /* Cantonades arrodonides */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Afegir ombra per a profunditat */
+    overflow: hidden; /* Amagar desbordament */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transició suau per a transformació i ombra */
 }
 
 .fitxa:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Moure fitxa cap amunt en passar el cursor */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Augmentar ombra en passar el cursor */
 }
 
 /* Imatge de cada fitxa */
 .fitxa img {
-    width: 100%;
-    height: auto;
-    border-bottom: 5px solid #4a90e2;
+    width: 100%; /* Amplada completa */
+    height: auto; /* Mantenir proporció */
+    border-bottom: 5px solid #4a90e2; /* Afegir border inferior */
 }
 
 /* Títol i text de les pel·lícules */
 .fitxa h2 {
-    font-size: 1.8rem;
-    color: #4a90e2;
-    margin: 1rem;
-    text-align: center;
+    font-size: 1.8rem; /* Establir mida de la font */
+    color: #4a90e2; /* Establir color del text */
+    margin: 1rem; /* Afegir marge */
+    text-align: center; /* Centrar text */
 }
 
 .fitxa p {
-    margin: 0.5rem 1.5rem;
-    font-size: 1rem;
-    color: #666;
+    margin: 0.5rem 1.5rem; /* Afegir marge */
+    font-size: 1rem; /* Establir mida de la font */
+    color: #666; /* Establir color del text */
 }
 
 .sinopsi {
-    font-style: italic;
-    color: #444;
-    margin-bottom: 1rem;
+    font-style: italic; /* Text en cursiva */
+    color: #444; /* Establir color del text */
+    margin-bottom: 1rem; /* Afegir marge inferior */
 }
+
 .fitxa.expandida {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Moure fitxa cap amunt */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Augmentar ombra */
 }
 
-
-/* Peu de pàgina amb gradient i centrament */
+/* Peu de pàgina amb gradient i centrat */
 footer {
-    background: linear-gradient(135deg, #4a90e2, #d94f70);
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #4a90e2, #d94f70); /* Establir gradient de fons */
+    color: #fff; /* Establir color del text a blanc */
+    text-align: center; /* Centrar text */
+    padding: 1rem; /* Afegir padding */
+    font-size: 0.9rem; /* Establir mida de la font */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Afegir ombra per a profunditat */
+    border-top: 2px solid rgba(255, 255, 255, 0.1); /* Afegir un subtil border superior */
 }
 
 footer span {
-    color: #ff6b6b;
+    color: #ff6b6b; /* Establir color del text */
 }

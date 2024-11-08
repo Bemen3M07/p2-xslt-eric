@@ -6,25 +6,32 @@
         <html>
             <head>
                 <title>Añadir Película</title>
-                <link rel="stylesheet" href="pelicules.css"/>
+                <style>
+                    /* Estilos del formulario */
+                    body { font-family: Arial, sans-serif; padding: 20px; }
+                    form { max-width: 400px; margin: 0 auto; }
+                    label { display: block; margin: 8px 0 4px; }
+                    input, textarea { width: 100%; padding: 8px; }
+                    button { margin-top: 10px; padding: 8px 16px; }
+                </style>
             </head>
             <body>
                 <h1>Añadir Nueva Película</h1>
                 <!-- Formulario para añadir película -->
                 <form id="formPelicula">
                     <label for="titol">Título:</label>
-                    <input type="text" id="titol" name="titol" required="required"/>
+                    <input type="text" id="titol" name="titol" />
                     
                     <label for="any">Año:</label>
-                    <input type="number" id="any" name="any" required="required"/>
+                    <input type="number" id="any" name="any" />
                     <label for="director">Director:</label>
-                    <input type="text" id="director" name="director" required="required"/>
+                    <input type="text" id="director" name="director" />
                     <label for="genere">Género:</label>
-                    <input type="text" id="genere" name="genere" required="required"/>
+                    <input type="text" id="genere" name="genere" />
                     <label for="sinopsi">Sinopsis:</label>
-                    <textarea id="sinopsi" name="sinopsi" required="required"></textarea>
+                    <textarea id="sinopsi" name="sinopsi" ></textarea>
                     <label for="imatge">Imagen:</label>
-                    <input type="file" id="imatge" name="imatge" accept="image/*" required="required"/>
+                    <input type="file" id="imatge" name="imatge" accept="image/*"/>
                     <button type="button" onclick="guardarPelicula()">Guardar Película</button>
                 </form>
 

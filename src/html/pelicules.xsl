@@ -124,6 +124,11 @@
                     </xsl:for-each>
                     <!-- Fi del bucle que repeteix per a cada pel·lícula. -->
                 </section>
+                <!-- Botón para abrir la página de añadir película -->
+                <a href="añadir_pelicula.xsl" target="_blank">
+                    <button>Añadir Película</button>
+                </a>
+
             </main>
 
             <!-- Peu de pàgina -->

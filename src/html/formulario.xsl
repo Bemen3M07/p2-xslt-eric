@@ -2,53 +2,75 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
 
+    <!-- Plantilla principal -->
     <xsl:template match="/">
         <html>
             <head>
-                <title>Añadir Nueva Película</title>
+                <title>Añadir Película</title>
                 <link rel="stylesheet" href="pelicules.css"/>
             </head>
             <body>
                 <h1>Añadir Nueva Película</h1>
+
                 <!-- Formulario para añadir película -->
                 <form id="formPelicula">
                     <label for="titol">Título:</label>
-                    <input type="text" id="titol" name="titol" />
+                    <input type="text" id="titol" name="titol" required="required"/>
                     
                     <label for="any">Año:</label>
-                    <input type="number" id="any" name="any" />
+                    <input type="number" id="any" name="any" required="required"/>
                     
                     <label for="director">Director:</label>
-                    <input type="text" id="director" name="director" />
+                    <input type="text" id="director" name="director" required="required"/>
                     
                     <label for="genere">Género:</label>
-                    <input type="text" id="genere" name="genere" />
+                    <input type="text" id="genere" name="genere" required="required"/>
                     
                     <label for="sinopsi">Sinopsis:</label>
-                    <textarea id="sinopsi" name="sinopsi"></textarea>
+                    <textarea id="sinopsi" name="sinopsi" required="required"></textarea>
                     
                     <label for="imatge">Imagen:</label>
-                    <input type="file" id="imatge" name="imatge" accept="image/*" />
+                    <input type="file" id="imatge" name="imatge" accept="image/*" required="required"/>
                     
                     <button type="button" onclick="guardarPelicula()">Guardar Película</button>
                 </form>
 
+                <h2>Películas Registradas</h2>
+                <div id="peliculas-lista"></div>
+
                 <script>
+                    // Cargar las películas del localStorage y mostrarlas
+                    function mostrarPeliculas() {
+                        let peliculas = JSON.parse(localStorage.getItem('pelicules')) || [];
+                        const lista = document.getElementById('peliculas-lista');
+                        lista.innerHTML = ''; // Limpiar lista actual
+
+                        peliculas.forEach(function(pelicula) {
+                            const divPelicula = document.createElement('div');
+                            divPelicula.innerHTML = `
+                                <h3>${pelicula.titol} (${pelicula.any})</h3>
+                                <p><strong>Director:</strong> ${pelicula.director}</p>
+                                <p><strong>Género:</strong> ${pelicula.genere}</p>
+                                <p><strong>Sinopsis:</strong> ${pelicula.sinopsi}</p>
+                                <img src="${pelicula.imatge}" alt="Imagen de ${pelicula.titol}" width="100" />
+                            `;
+                            lista.appendChild(divPelicula);
+                        });
+                    }
+
+                    // Función para guardar película en localStorage
                     function guardarPelicula() {
-                        // Obtenemos los datos del formulario
                         const titol = document.getElementById('titol').value;
                         const any = document.getElementById('any').value;
                         const director = document.getElementById('director').value;
                         const genere = document.getElementById('genere').value;
                         const sinopsi = document.getElementById('sinopsi').value;
 
-                        // Guardar imagen en Base64
                         const imatgeInput = document.getElementById('imatge');
                         const reader = new FileReader();
                         reader.onload = function(event) {
-                            const imatge = event.target.result;
+                            const imatge = event.target.result; // Convertir la imagen a Base64
 
-                            // Crear objeto película
                             const pelicula = {
                                 titol: titol,
                                 any: any,
@@ -58,40 +80,28 @@
                                 imatge: imatge
                             };
 
-                            // Guardar en localStorage (para simular el guardado)
-                            let pelicules = JSON.parse(localStorage.getItem('pelicules')) || [];
-                            pelicules.push(pelicula);
-                            localStorage.setItem('pelicules', JSON.stringify(pelicules));
+                            // Obtener películas almacenadas y agregar la nueva
+                            let peliculas = JSON.parse(localStorage.getItem('pelicules')) || [];
+                            peliculas.push(pelicula);
+                            localStorage.setItem('pelicules', JSON.stringify(peliculas));
 
                             alert('Película guardada exitosamente.');
+
+                            // Limpiar el formulario
                             document.getElementById("formPelicula").reset();
 
-                            // Generar el archivo XML con los datos
-                            generarXML(pelicula);
+                            // Mostrar las películas actualizadas
+                            mostrarPeliculas();
                         };
-                        reader.readAsDataURL(imatgeInput.files[0]); // Convertimos la imagen a Base64
+                        reader.readAsDataURL(imatgeInput.files[0]); // Convertir la imagen a Base64
                     }
 
-                    function generarXML(pelicula) {
-                        let peliculasXML = `<pelicula>
-                                                <titol>${pelicula.titol}</titol>
-                                                <any>${pelicula.any}</any>
-                                                <director>${pelicula.director}</director>
-                                                <genere>${pelicula.genere}</genere>
-                                                <sinopsi>${pelicula.sinopsi}</sinopsi>
-                                                <imatge>${pelicula.imatge}</imatge>
-                                            </pelicula>`;
-
-                        // Crear el XML y permitir la descarga
-                        let blob = new Blob([peliculasXML], { type: "application/xml" });
-                        let url = URL.createObjectURL(blob);
-                        let a = document.createElement("a");
-                        a.href = url;
-                        a.download = "peliculas_actualizado.xml";
-                        a.click();
-                    }
+                    // Cargar las películas cuando se carga la página
+                    window.onload = mostrarPeliculas;
                 </script>
+                <button onclick="window.history.back()">Atrás</button>
             </body>
         </html>
     </xsl:template>
+
 </xsl:stylesheet>
